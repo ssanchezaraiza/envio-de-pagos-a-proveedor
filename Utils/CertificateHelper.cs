@@ -1,0 +1,1 @@
+using System.Net;using System.Net.Http;namespace EnviadorPagosWPF.Utils;public static class CertificateHelper{public static HttpClientHandler CreatePermissiveHandler(){var h=new HttpClientHandler{UseCookies=true,CookieContainer=new CookieContainer()};h.ServerCertificateCustomValidationCallback=(m,c,chain,err)=>true;return h;}}
